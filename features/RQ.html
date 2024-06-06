@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Quote Generator</title>
+  <style>
+    /* Add your CSS styles here */
+  </style>
+</head>
+<body>
+
+  <h1>Random Quote Generator</h1>
+
+  <div id="quote"></div>
+  <button onclick="generateQuote()">Generate Quote</button>
+
+  <script>
+    function generateQuote() {
+      var quotes = [
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "Life is what happens when you're busy making other plans. - John Lennon",
+        "In the end, it's not the years in your life that count. It's the life in your years. - Abraham Lincoln",
+        "Believe you can and you're halfway there. - Theodore Roosevelt",
+        "The only impossible journey is the one you never begin. - Tony Robbins"
+      ];
+
+      var randomNumber = Math.floor(Math.random() * quotes.length);
+      var randomQuote = quotes[randomNumber];
+
+      var quoteDiv = document.getElementById('quote');
+      quoteDiv.innerHTML = '<blockquote>' + randomQuote + '</blockquote>';
+    }
+  </script>
+
+</body>
+</html>
